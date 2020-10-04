@@ -50,3 +50,18 @@ WorkInfo: The class contains information about the works. For each WorkRequest w
 
 
 
+
+
+public class AmodWorker extends Worker {
+    public static final String NOTIFICATION_CHANNEL_ID = "10001";
+    public AmodWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+        super(context, workerParams);
+    }
+
+    @NonNull
+    @Override
+    public Result doWork() {
+      createNotification("I am amod","finished");
+        return  Result.success();
+    }
+
