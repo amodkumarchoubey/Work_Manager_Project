@@ -49,15 +49,4 @@ WorkManager: The class used to enqueue the work requests.
 WorkInfo: The class contains information about the works. For each WorkRequest we can get a LiveData using WorkManager. The LiveData holds the WorkInfo and by observing it we can determine the Work Informations.
 
 
-public class AmodWorker extends Worker {
-    public static final String NOTIFICATION_CHANNEL_ID = "10001";
-    public AmodWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
-        super(context, workerParams);
-    }
 
-    @NonNull
-    @Override
-    public Result doWork() {
-      createNotification("I am amod","finished");
-        return  Result.success();
-    }
